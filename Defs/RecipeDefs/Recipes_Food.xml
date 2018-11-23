@@ -5,7 +5,7 @@
 		<defName>avPackMeat40</defName>
 		<label>Pack meat x40</label>
 		<description>Make a pack out of raw meat, allowing to use stacks more efficiently.</description>
-		<jobString>Paking meat.</jobString>
+		<jobString>Packing meat.</jobString>
 		<workAmount>120</workAmount>
 		<workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
 		<efficiencyStat>ButcheryFleshEfficiency</efficiencyStat>
@@ -32,6 +32,11 @@
 				<li>avMysteriousMeatPack</li>
 			</disallowedThingDefs>
 		</fixedIngredientFilter>
+		<products>
+			<avRegularMeatPack>40</avRegularMeatPack>
+			<avOddMeatPack>40</avOddMeatPack>
+			<avMysteriousMeatPack>40</avMysteriousMeatPack>
+		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
 
@@ -39,7 +44,7 @@
 		<defName>avPackMeat10</defName>
 		<label>Pack meat x10</label>
 		<description>Make a pack out of raw meat, allowing to use stacks more efficiently.</description>
-		<jobString>Paking meat.</jobString>
+		<jobString>Packing meat.</jobString>
 		<workAmount>30</workAmount>
 		<workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
 		<efficiencyStat>ButcheryFleshEfficiency</efficiencyStat>
@@ -66,14 +71,11 @@
 				<li>avMysteriousMeatPack</li>
 			</disallowedThingDefs>
 		</fixedIngredientFilter>
-		<defaultIngredientFilter>
-
-			<categories>
-
-				<li>MeatRaw</li>
-
-			</categories>
-		</defaultIngredientFilter>
+		<products>
+			<avRegularMeatPack>10</avRegularMeatPack>
+			<avOddMeatPack>10</avOddMeatPack>
+			<avMysteriousMeatPack>10</avMysteriousMeatPack>
+		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
 
@@ -81,7 +83,7 @@
 		<defName>avPackMeat</defName>
 		<label>Pack meat</label>
 		<description>Make a pack out of raw meat, allowing to use stacks more efficiently.</description>
-		<jobString>Paking meat.</jobString>
+		<jobString>Packing meat.</jobString>
 		<workAmount>3</workAmount>
 		<workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
 		<efficiencyStat>ButcheryFleshEfficiency</efficiencyStat>
@@ -108,14 +110,11 @@
 				<li>avMysteriousMeatPack</li>
 			</disallowedThingDefs>
 		</fixedIngredientFilter>
-		<defaultIngredientFilter>
-
-			<categories>
-
-				<li>MeatRaw</li>
-
-			</categories>
-		</defaultIngredientFilter>
+		<products>
+			<avRegularMeatPack>1</avRegularMeatPack>
+			<avOddMeatPack>1</avOddMeatPack>
+			<avMysteriousMeatPack>1</avMysteriousMeatPack>
+		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
 </Defs>

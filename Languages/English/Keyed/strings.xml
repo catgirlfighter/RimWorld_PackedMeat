@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<!-- settings -->
+	<pack_on_butchering>Pack meat on butchering</pack_on_butchering>
+	<odd_is_fine>Treat meat with unusual properties (ex. insect) as 'regular meat'</odd_is_fine>
+</LanguageData>

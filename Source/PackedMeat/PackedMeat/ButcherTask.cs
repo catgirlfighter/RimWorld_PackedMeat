@@ -29,11 +29,11 @@ namespace PackedMeat
 
                 ThingDef d;
                 if (FoodUtility.IsHumanlikeMeat(meat.def))
-                    d = DefDatabase<ThingDef>.GetNamed("avMysteriousMeatPack");
+                    d = PackedMeat.MysteriousPackDef; //DefDatabase<ThingDef>.GetNamed("avMysteriousMeatPack");
                 else if (!Settings.unusual_is_generic && meat.def.ingestible.specialThoughtDirect != null && meat.def.ingestible.specialThoughtDirect.stages[0].baseMoodEffect < 0)
-                    d = DefDatabase<ThingDef>.GetNamed("avOddMeatPack");
+                    d = PackedMeat.OddPackDef; //DefDatabase<ThingDef>.GetNamed("avOddMeatPack");
                 else
-                    d = DefDatabase<ThingDef>.GetNamed("avRegularMeatPack");
+                    d = PackedMeat.RegularPackDef; //DefDatabase<ThingDef>.GetNamed("avRegularMeatPack");
 
                 ThingWithComps t = (ThingWithComps)ThingMaker.MakeThing(d, null);
 
@@ -42,11 +42,13 @@ namespace PackedMeat
                 CompIngredients ingredientsComp = t.TryGetComp<CompIngredients>();
 
                 if (ingredientsComp != null)
+                {
+                    ingredientsComp.ingredients.Clear();
                     ingredientsComp.RegisterIngredient(meat.def);
+                }
 
-                things.Remove(meat);
-                
-                things.Insert(0, t);
+                things.Clear();
+                things.Add(t);
 
                 __result = things;
             }

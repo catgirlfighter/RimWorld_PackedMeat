@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<avPackMeat40.label>Паковать мясо x40</avPackMeat40.label>
+	<avPackMeat40.description>Сделать упаковку из сырого мяса, тем самым увеличив эффективность стаков</avPackMeat40.description>
+	<avPackMeat40.jobString>Пакует мясо.</avPackMeat40.jobString>
+	<avPackMeat10.label>Паковать мясо x10</avPackMeat10.label>
+	<avPackMeat10.description>Сделать упаковку из сырого мяса, тем самым увеличив эффективность стаков</avPackMeat10.description>
+	<avPackMeat10.jobString>Пакует мясо.</avPackMeat10.jobString>
+	<avPackMeat.label>Паковать мясо</avPackMeat.label>
+	<avPackMeat.description>Сделать упаковку из сырого мяса, тем самым увеличив эффективность стаков</avPackMeat.description>
+	<avPackMeat.jobString>Пакует мясо.</avPackMeat.jobString>
+</LanguageData>

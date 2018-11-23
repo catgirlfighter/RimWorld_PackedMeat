@@ -9,6 +9,17 @@ namespace PackedMeat
 {
     class CookTask
     {
+        static void StackIn(Thing thing, CompIngredients ingredients, Thing with)
+        {
+            ingredients.RegisterIngredient(with.def);
+            CompRottable r = thing.TryGetComp<CompRottable>();
+            CompRottable rr = with.TryGetComp<CompRottable>();
+
+            if (r != null && rr != null)
+                r.RotProgress = (r.RotProgress*thing.stackCount+rr.RotProgress*with.stackCount)/(thing.stackCount+with.stackCount);
+            thing.stackCount += with.stackCount;
+        }
+        
         //Verse.GenRecipe
         //public static IEnumerable<Thing> MakeRecipeProducts(RecipeDef recipeDef, Pawn worker, List<Thing> ingredients, Thing dominantIngredient, IBillGiver billGiver)
         [HarmonyPatch(typeof(GenRecipe), "MakeRecipeProducts", new Type[] { typeof(RecipeDef), typeof(Pawn), typeof(List<Thing>), typeof(Thing), typeof(IBillGiver) })]
@@ -21,34 +32,38 @@ namespace PackedMeat
 
                 var things = __result.ToList();
 
-                if (things.Count == 0 && (recipeDef.defName == "avPackMeat" || recipeDef.defName == "avPackMeat10" || recipeDef.defName == "avPackMeat40"))
+                if (recipeDef.defName == "avPackMeat" || recipeDef.defName == "avPackMeat10" || recipeDef.defName == "avPackMeat40")
                 {
+                    Thing reg = things.First(x => x.def == PackedMeat.RegularPackDef);
+                    Thing odd = things.First(x => x.def == PackedMeat.OddPackDef);
+                    Thing mys = things.First(x => x.def == PackedMeat.MysteriousPackDef);
+                    reg.stackCount = 0;
+                    odd.stackCount = 0;
+                    mys.stackCount = 0;
+                    CompIngredients regc = reg.TryGetComp<CompIngredients>();
+                    CompIngredients oddc = odd.TryGetComp<CompIngredients>();
+                    CompIngredients mysc = mys.TryGetComp<CompIngredients>();
+                    regc.ingredients.Clear();
+                    oddc.ingredients.Clear();
+                    mysc.ingredients.Clear();
+
                     foreach (var ingredient in (ingredients))
                     {
-                        ThingDef d;
-
                         if (FoodUtility.IsHumanlikeMeat(ingredient.def))
-                            d = DefDatabase<ThingDef>.GetNamed("avMysteriousMeatPack");
+                            StackIn(mys, mysc, ingredient);
                         else if (!Settings.unusual_is_generic && ingredient.def.ingestible.specialThoughtDirect != null && ingredient.def.ingestible.specialThoughtDirect.stages[0].baseMoodEffect < 0)
-                            d = DefDatabase<ThingDef>.GetNamed("avOddMeatPack");
+                            StackIn(odd, oddc, ingredient);
                         else
-                            d = DefDatabase<ThingDef>.GetNamed("avRegularMeatPack");
-
-                        ThingWithComps t = (ThingWithComps)ThingMaker.MakeThing(d, null);
-                        
-                        t.stackCount = ingredient.stackCount;
-                        CompIngredients comp = t.TryGetComp<CompIngredients>();
-                        if (comp != null)
-                            comp.RegisterIngredient(ingredient.def);
-
-                        CompRottable r = t.TryGetComp<CompRottable>();
-                        CompRottable rr = ingredient.TryGetComp<CompRottable>();
-
-                        if (r != null && r != null)
-                            r.RotProgress = rr.RotProgress;
-
-                        things.Add(t);
+                            StackIn(reg, regc, ingredient);
                     }
+
+                    if (reg.stackCount == 0)
+                        things.Remove(reg);
+                    if (odd.stackCount == 0)
+                        things.Remove(odd);
+                    if (mys.stackCount == 0)
+                        things.Remove(mys);
+
                     __result = things;
                     return;
                 }
@@ -73,10 +88,10 @@ namespace PackedMeat
                                     ingredientsComp.ingredients.Remove(ingredient.def);
                             }
                         }
-
-                        __result = things;
                     }
                 }
+
+                __result = things;
 
             }
         }

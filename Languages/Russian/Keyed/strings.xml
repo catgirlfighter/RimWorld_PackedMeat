@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+	<!-- settings -->
+	<pack_on_butchering>Паковать мясо при разделке</pack_on_butchering>
+	<odd_is_fine>Считать мясо с необычными свойствами (напр.: насекомых) 'нормальным'</odd_is_fine>
+</LanguageData>
