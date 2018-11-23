@@ -31,7 +31,7 @@ namespace PackedMeat
         {
             get
             {
-                return CommonSenseMod != null && CommonSense.Settings.add_meal_ingredients;
+                return CommonSenseMod != null;// && CommonSense.Settings.add_meal_ingredients;
             }
         }
 

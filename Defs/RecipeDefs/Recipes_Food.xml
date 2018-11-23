@@ -26,11 +26,6 @@
 			<categories>
 				<li>MeatRaw</li>
 			</categories>
-			<disallowedThingDefs>
-				<li>avRegularMeatPack</li>
-				<li>avOddMeatPack</li>
-				<li>avMysteriousMeatPack</li>
-			</disallowedThingDefs>
 		</fixedIngredientFilter>
 		<products>
 			<avRegularMeatPack>40</avRegularMeatPack>
@@ -65,11 +60,6 @@
 			<categories>
 				<li>MeatRaw</li>
 			</categories>
-			<disallowedThingDefs>
-				<li>avRegularMeatPack</li>
-				<li>avOddMeatPack</li>
-				<li>avMysteriousMeatPack</li>
-			</disallowedThingDefs>
 		</fixedIngredientFilter>
 		<products>
 			<avRegularMeatPack>10</avRegularMeatPack>
@@ -104,11 +94,6 @@
 			<categories>
 				<li>MeatRaw</li>
 			</categories>
-			<disallowedThingDefs>
-				<li>avRegularMeatPack</li>
-				<li>avOddMeatPack</li>
-				<li>avMysteriousMeatPack</li>
-			</disallowedThingDefs>
 		</fixedIngredientFilter>
 		<products>
 			<avRegularMeatPack>1</avRegularMeatPack>

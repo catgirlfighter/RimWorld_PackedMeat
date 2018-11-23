@@ -38,9 +38,6 @@
       <HintPath>..\..\..\..\..\RimWorldWin64_Data\Managed\Assembly-CSharp.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="CommonSense">
-      <HintPath>..\..\..\..\CommonSense\Assemblies\CommonSense.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -53,6 +50,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AfterPatch.cs" />
     <Compile Include="RandomIngredients.cs" />
     <Compile Include="Thoughts.cs" />
     <Compile Include="CookTask.cs" />

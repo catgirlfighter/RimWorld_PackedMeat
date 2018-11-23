@@ -32,7 +32,7 @@ namespace PackedMeat
 
                 var things = __result.ToList();
 
-                if (recipeDef.defName == "avPackMeat" || recipeDef.defName == "avPackMeat10" || recipeDef.defName == "avPackMeat40")
+                if (recipeDef.defName.Contains("avPackMeat"))
                 {
                     Thing reg = things.First(x => x.def == PackedMeat.RegularPackDef);
                     Thing odd = things.First(x => x.def == PackedMeat.OddPackDef);
@@ -84,7 +84,7 @@ namespace PackedMeat
                                     if (!ingredientsComp.ingredients.Contains(subComp.ingredients[counter]))
                                         ingredientsComp.ingredients.Insert(i+1, subComp.ingredients[counter]);
                                 if (ingredient.def.ingestible == null || ingredient.def.ingestible.specialThoughtAsIngredient == null 
-                                    || ingredient.def.defName == "avOddMeatPack" && subComp.ingredients.Count > 0)
+                                    || ingredient.def == PackedMeat.OddPackDef && subComp.ingredients.Count > 0)
                                     ingredientsComp.ingredients.Remove(ingredient.def);
                             }
                         }
