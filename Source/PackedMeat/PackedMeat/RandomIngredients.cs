@@ -32,16 +32,13 @@ namespace PackedMeat
                     return;
 
                 CompIngredients ings = __result.TryGetComp<CompIngredients>();
-                if (ings == null || ings.ingredients.Count > 0)
+                if (ings == null || ings.ingredients.Count == 0)
                     return;
 
-                if (def == PackedMeat.MysteriousPackDef)
-                {   // !x.comps.Any(y => y.compClass == typeof(CompIngredients))
-                    if (ings.ingredients.Count > 0)
-                        ings.ingredients.Clear();
-                    else
-                        return;
+                ings.ingredients.Clear();
 
+                if (def == PackedMeat.MysteriousPackDef)
+                {
                     if (humanlikes == null)
                         humanlikes = DefDatabase<ThingDef>.AllDefsListForReading.Where(x => x.IsIngestible && x.ingestible.foodType == FoodTypeFlags.Meat 
                         && x.ingestible.sourceDef != null && x.ingestible.sourceDef.race != null &&  x.ingestible.sourceDef.race.Humanlike);
@@ -51,11 +48,6 @@ namespace PackedMeat
                 }
                 else if (def == PackedMeat.OddPackDef)
                 {
-                    if (ings.ingredients.Count > 0)
-                        ings.ingredients.Clear();
-                    else
-                        return;
-
                     if (disgusting == null)
                         disgusting = DefDatabase<ThingDef>.AllDefsListForReading.Where(x => x.IsIngestible && x.ingestible.foodType == FoodTypeFlags.Meat
                         && x.ingestible.sourceDef != null && x.ingestible.sourceDef.race != null && !x.ingestible.sourceDef.race.Humanlike
@@ -66,11 +58,6 @@ namespace PackedMeat
                 }
                 else if (def == PackedMeat.RegularPackDef)
                 {
-                    if (ings.ingredients.Count > 0)
-                        ings.ingredients.Clear();
-                    else
-                        return;
-
                     if (regular == null)
                         regular = DefDatabase<ThingDef>.AllDefsListForReading.Where(x => x.IsIngestible && x.ingestible.foodType == FoodTypeFlags.Meat
                         && x.ingestible.sourceDef != null && x.ingestible.sourceDef.race != null && !x.ingestible.sourceDef.race.Humanlike

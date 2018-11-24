@@ -47,7 +47,7 @@ namespace PackedMeat
                     ingredientsComp.RegisterIngredient(meat.def);
                 }
 
-                things.Clear();
+                things.Remove(meat);
                 things.Add(t);
 
                 __result = things;
