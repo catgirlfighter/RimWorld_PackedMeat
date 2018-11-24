@@ -76,7 +76,7 @@ namespace PackedMeat
                         foreach (var ingredient in (ingredients))
                         {
                             CompIngredients subComp = ingredient.TryGetComp<CompIngredients>();
-                            if (subComp != null)
+                            if (subComp != null && subComp.ingredients.Count > 0)
                             {
                                 int i = ingredientsComp.ingredients.IndexOf(ingredient.def);
                                 
