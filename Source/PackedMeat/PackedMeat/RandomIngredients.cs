@@ -21,7 +21,7 @@ namespace PackedMeat
             static bool Prepare(HarmonyInstance instance)
             {
                 //Settings.CSLoaded = instance. ("net.avilmask.rimworld.mod.CommonSense");
-                //Log.Message("CSLoaded" + Settings.CSLoaded.ToString());
+                //Log.Message("CSLoaded" + Settings.CSLoaded.ToString
                 return Settings.CommonSenseMod != null;
             }
 
@@ -30,15 +30,13 @@ namespace PackedMeat
             {
                 if (!Settings.add_meal_ingredients || __result == null || !__result.def.IsIngestible)
                     return;
-
                 CompIngredients ings = __result.TryGetComp<CompIngredients>();
                 if (ings == null || ings.ingredients.Count == 0)
                     return;
 
-                ings.ingredients.Clear();
-
                 if (def == PackedMeat.MysteriousPackDef)
                 {
+                    ings.ingredients.Clear();
                     if (humanlikes == null)
                         humanlikes = DefDatabase<ThingDef>.AllDefsListForReading.Where(x => x.IsIngestible && x.ingestible.foodType == FoodTypeFlags.Meat 
                         && x.ingestible.sourceDef != null && x.ingestible.sourceDef.race != null &&  x.ingestible.sourceDef.race.Humanlike);
@@ -48,6 +46,7 @@ namespace PackedMeat
                 }
                 else if (def == PackedMeat.OddPackDef)
                 {
+                    ings.ingredients.Clear();
                     if (disgusting == null)
                         disgusting = DefDatabase<ThingDef>.AllDefsListForReading.Where(x => x.IsIngestible && x.ingestible.foodType == FoodTypeFlags.Meat
                         && x.ingestible.sourceDef != null && x.ingestible.sourceDef.race != null && !x.ingestible.sourceDef.race.Humanlike
@@ -58,6 +57,7 @@ namespace PackedMeat
                 }
                 else if (def == PackedMeat.RegularPackDef)
                 {
+                    ings.ingredients.Clear();
                     if (regular == null)
                         regular = DefDatabase<ThingDef>.AllDefsListForReading.Where(x => x.IsIngestible && x.ingestible.foodType == FoodTypeFlags.Meat
                         && x.ingestible.sourceDef != null && x.ingestible.sourceDef.race != null && !x.ingestible.sourceDef.race.Humanlike
