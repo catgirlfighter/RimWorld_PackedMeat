@@ -48,7 +48,7 @@ namespace PackedMeat
                 }
 
                 things.Remove(meat);
-                things.Add(t);
+                things.Insert(0,t);
 
                 __result = things;
             }
