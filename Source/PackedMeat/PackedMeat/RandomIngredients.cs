@@ -17,19 +17,13 @@ namespace PackedMeat
             static IEnumerable<ThingDef> humanlikes = null;
             static IEnumerable<ThingDef> disgusting = null;
             static IEnumerable<ThingDef> regular = null;
-
-            static bool Prepare(HarmonyInstance instance)
-            {
-                //Settings.CSLoaded = instance. ("net.avilmask.rimworld.mod.CommonSense");
-                //Log.Message("CSLoaded" + Settings.CSLoaded.ToString
-                return Settings.CommonSenseMod != null;
-            }
-
+            
             [HarmonyAfter(new string[] { "net.avilmask.rimworld.mod.CommonSense" })]
             static void Postfix(Thing __result, ThingDef def, ThingDef stuff)
             {
-                if (!Settings.add_meal_ingredients || __result == null || !__result.def.IsIngestible)
+                if (Settings.CommonSenseMod == null || __result == null || !__result.def.IsIngestible)
                     return;
+
                 CompIngredients ings = __result.TryGetComp<CompIngredients>();
                 if (ings == null || ings.ingredients.Count == 0)
                     return;
@@ -66,6 +60,11 @@ namespace PackedMeat
                     ThingDef td = regular.RandomElement();
                     if (td != null) ings.RegisterIngredient(td);
                 }
+            }
+
+            static bool Prepare(HarmonyInstance instance)
+            {
+                return Settings.CommonSenseMod != null;
             }
 
         }

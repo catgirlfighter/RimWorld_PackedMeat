@@ -27,13 +27,6 @@ namespace PackedMeat
                 }
             }
         }
-        public static bool add_meal_ingredients
-        {
-            get
-            {
-                return CommonSenseMod != null;// && CommonSense.Settings.add_meal_ingredients;
-            }
-        }
 
         public static void DoSettingsWindowContents(Rect inRect)
         {
