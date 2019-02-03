@@ -2,7 +2,7 @@
 <ModMetaData>
 	<name>PackedMeat</name>
 	<author>avilmask</author>
-	<targetVersion>1.0.0</targetVersion>
+	<supportedVersions><li>1.0</li></supportedVersions>
 	<url>none</url>
 	<description>- ability to make packs of meat at butchering table, that can be stacked depending on their type (regular meat, odd meat and humanline meat);
 - cooked meals inherit components of complex ingredients (pack of meat is a complex ingredient that contains basic meat inside it);
