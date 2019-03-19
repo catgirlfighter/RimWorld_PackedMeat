@@ -1,12 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Linq;
 using UnityEngine;
 using Verse;
+using RimWorld;
 
 namespace PackedMeat
 {
+    [DefOf]
+    public static class PackedMeatDefOf
+    {
+        public static ThingDef avRegularMeatPack;
+        public static ThingDef avOddMeatPack;
+        public static ThingDef avMysteriousMeatPack;
+    }
+
     class Settings : ModSettings
     {
         public static bool pack_on_butchering = false;

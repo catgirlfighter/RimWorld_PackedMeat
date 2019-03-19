@@ -51,6 +51,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AfterPatch.cs" />
+    <Compile Include="ButcherCounter.cs" />
     <Compile Include="RandomIngredients.cs" />
     <Compile Include="Thoughts.cs" />
     <Compile Include="CookTask.cs" />

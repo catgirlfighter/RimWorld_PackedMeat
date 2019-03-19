@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <LanguageData>
-	<avRegularMeatPack.label>Пакет простого мяса</avRegularMeatPack.label>
+	<avRegularMeatPack.label>Обычное мясо</avRegularMeatPack.label>
 	<avRegularMeatPack.description>Сырое разделанное мясо. Может быть приготовлено или съедено в сыром виде.</avRegularMeatPack.description>
-	<avOddMeatPack.label>Пакет странного мяса</avOddMeatPack.label>
+	<avOddMeatPack.label>Странное мясо</avOddMeatPack.label>
 	<avOddMeatPack.description>Сырое разделанное мясо. При необходимости может быть приготовлено или даже съедено в сыром виде. Крайне неаппетитно.</avOddMeatPack.description>
-	<avMysteriousMeatPack.label>Пакет таинственного мяса</avMysteriousMeatPack.label>
+	<avMysteriousMeatPack.label>Таинственное мясо</avMysteriousMeatPack.label>
 <avMysteriousMeatPack.description>Сырое разделанное мясо. Может быть приготовлено или даже съедено в сыром виде, но большинству людей такая идея не по нраву.</avMysteriousMeatPack.description>
 </LanguageData>

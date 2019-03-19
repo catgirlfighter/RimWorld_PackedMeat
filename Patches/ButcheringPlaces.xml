@@ -8,13 +8,28 @@
          		<li>avPackMeat</li>
 		</value>
 	</Operation>
-
+	
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="TableButcher"]/recipes</xpath>
 		<value>
          		<li>avPackMeat40</li>
          		<li>avPackMeat10</li>
          		<li>avPackMeat</li>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/RecipeDef[defName="ButcherCorpseFlesh"]/workerCounterClass</xpath>
+		<value>
+			<workerCounterClass>PackedMeat.avRecipeWorkerCounter_ButcherAnimals</workerCounterClass>
+		</value>
+	</Operation>	
+	
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/RecipeDef/defaultIngredientFilter/disallowedThingDefs[li="Meat_Human"]</xpath>
+		<value>
+         		<li>avOddMeatPack</li>
+         		<li>avMysteriousMeatPack</li>
 		</value>
 	</Operation>
 </Patch>

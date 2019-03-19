@@ -4,7 +4,7 @@
 	<ThingDef ParentName="OrganicProductBase">
 		<thingClass>ThingWithComps</thingClass>
 		<defName>avRegularMeatPack</defName>
-		<label>Pack of Regular Meat</label>
+		<label>Regular Meat</label>
 		<description>Raw butchered flesh. Can be cooked into meals or eaten raw.</description>
 		<graphicData>
 			<texPath>Things/Item/Resource/MeatFoodRaw/RegularMeatPack</texPath>
@@ -31,14 +31,14 @@
 			<tasteThought>AteRawFood</tasteThought>
 		</ingestible>
 		<thingCategories>
-			<li>MeatRaw</li>
+			<li>PackedMeat</li>
 		</thingCategories>
 	</ThingDef>
 
 	<ThingDef ParentName="OrganicProductBase">
 		<thingClass>ThingWithComps</thingClass>
 		<defName>avOddMeatPack</defName>
-		<label>Pack of Odd Meat</label>
+		<label>Odd Meat</label>
 		<description>Raw butchered flesh. If necessary, can be cooked into meals or eaten raw. Extremely unappetizing.</description>
 		<graphicData>
 			<texPath>Things/Item/Resource/MeatFoodRaw/OddMeatPack</texPath>
@@ -67,14 +67,14 @@
 			<specialThoughtAsIngredient>avAteOddMeatAsIngredient</specialThoughtAsIngredient>
 		</ingestible>
 		<thingCategories>
-			<li>MeatRaw</li>
+			<li>PackedMeat</li>
 		</thingCategories>
 	</ThingDef>
 
 	<ThingDef ParentName="OrganicProductBase">
 		<thingClass>ThingWithComps</thingClass>
 		<defName>avMysteriousMeatPack</defName>
-		<label>Pack of Mysterious Meat</label>
+		<label>Mysterious Meat</label>
 		<description>Raw butchered flesh. Can be cooked into meals or eaten raw, although most humans dislike this idea.</description>
 		<graphicData>
 			<texPath>Things/Item/Resource/MeatFoodRaw/MysteriousMeatPack</texPath>
@@ -101,7 +101,7 @@
 			<tasteThought>AteRawFood</tasteThought>	
 		</ingestible>
 		<thingCategories>
-			<li>MeatRaw</li>
+			<li>PackedMeat</li>
 		</thingCategories>
 	</ThingDef>
 </Defs>
