@@ -5,9 +5,17 @@
 	<supportedVersions>
 		<li>1.0</li>
 		<li>1.1</li>
+		<li>1.2</li>
 	</supportedVersions>
 	<url>none</url>
 	<packageId>avilmask.PackedMeat</packageId>
+	<modDependencies>
+		<li>
+			<packageId>brrainz.harmony</packageId>
+			<displayName>Harmony</displayName>
+			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+		</li>
+	</modDependencies>
 	<description>- ability to make packs of meat at butchering table, that can be stacked depending on their type (regular meat, odd meat and humanline meat);
 - cooked meals inherit components of complex ingredients (pack of meat is a complex ingredient that contains basic meat inside it);
 - (optional) pack meat on butchering;
