@@ -16,14 +16,5 @@
 			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
 		</li>
 	</modDependencies>
-	<description>- ability to make packs of meat at butchering table, that can be stacked depending on their type (regular meat, odd meat and humanline meat);
-- cooked meals inherit components of complex ingredients (pack of meat is a complex ingredient that contains basic meat inside it);
-- (optional) pack meat on butchering;
-- (optional) consider unusual meat (ex. insect) to be 'normal', allowing to pack it as 'regular meat';
-
-This mod gives a way to consolidate all different meats into the same stacks, allowing to preserve space.
-
-Be wary of modded-in refined kinds of meat, that considered to be "raw". XML doesn't allow to filter out classes of objects or tastes of food, so you should disable refined kinds of "raw" meat on your own. I'll see, if I can tweak it.
-
-Powerd by Harmony (included into mod).</description>
+	<description>This mod gives a way to consolidate all different meats into the same stacks, allowing to preserve space.</description>
 </ModMetaData>
