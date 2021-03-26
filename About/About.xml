@@ -16,5 +16,8 @@
 			<steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
 		</li>
 	</modDependencies>
+	<loadAfter>
+		<li>SkullOG.EBT_copy</li>
+	</loadAfter>
 	<description>This mod gives a way to consolidate all different meats into the same stacks, allowing to preserve space.</description>
 </ModMetaData>
