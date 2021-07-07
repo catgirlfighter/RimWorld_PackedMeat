@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThoughtDef>
+		<defName>avAteOddMeatDirect</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate odd meat</label>
+				<description>I ate some odd smelling meat. It was, possibly, one of the most disgusting things I've ever tasted.</description>
+				<baseMoodEffect>-6</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+
+	<ThoughtDef>
+		<defName>avAteOddMeatAsIngredient</defName>
+		<showBubble>true</showBubble>
+		<icon>Things/Mote/ThoughtSymbol/Food</icon>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate cooked odd meat</label>
+				<description>I ate a meal cooked from odd smelling meat. The seasoning partly covered the taste, but unappetizing odor still could be recognized.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

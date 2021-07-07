@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<RecipeDef>
+		<defName>avPackMeat40</defName>
+		<label>Pack meat x40</label>
+		<description>Make a pack out of raw meat, allowing to use stacks more efficiently.</description>
+		<jobString>Packing meat.</jobString>
+		<workAmount>120</workAmount>
+		<workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
+		<efficiencyStat>ButcheryFleshEfficiency</efficiencyStat>
+		<effectWorking>ButcherFlesh</effectWorking>
+		<soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+					</categories>
+				</filter>
+				<count>40</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+		</fixedIngredientFilter>
+		<products>
+			<avRegularMeatPack>40</avRegularMeatPack>
+			<avOddMeatPack>40</avOddMeatPack>
+			<avMysteriousMeatPack>40</avMysteriousMeatPack>
+		</products>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>avPackMeat10</defName>
+		<label>Pack meat x10</label>
+		<description>Make a pack out of raw meat, allowing to use stacks more efficiently.</description>
+		<jobString>Packing meat.</jobString>
+		<workAmount>30</workAmount>
+		<workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
+		<efficiencyStat>ButcheryFleshEfficiency</efficiencyStat>
+		<effectWorking>ButcherFlesh</effectWorking>
+		<soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+					</categories>
+				</filter>
+				<count>10</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+		</fixedIngredientFilter>
+		<products>
+			<avRegularMeatPack>10</avRegularMeatPack>
+			<avOddMeatPack>10</avOddMeatPack>
+			<avMysteriousMeatPack>10</avMysteriousMeatPack>
+		</products>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+
+	<RecipeDef>
+		<defName>avPackMeat</defName>
+		<label>Pack meat</label>
+		<description>Make a pack out of raw meat, allowing to use stacks more efficiently.</description>
+		<jobString>Packing meat.</jobString>
+		<workAmount>3</workAmount>
+		<workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
+		<efficiencyStat>ButcheryFleshEfficiency</efficiencyStat>
+		<effectWorking>ButcherFlesh</effectWorking>
+		<soundWorking>Recipe_ButcherCorpseFlesh</soundWorking>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>MeatRaw</li>
+					</categories>
+				</filter>
+				<count>1</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>MeatRaw</li>
+			</categories>
+		</fixedIngredientFilter>
+		<products>
+			<avRegularMeatPack>1</avRegularMeatPack>
+			<avOddMeatPack>1</avOddMeatPack>
+			<avMysteriousMeatPack>1</avMysteriousMeatPack>
+		</products>
+		<workSkill>Cooking</workSkill>
+	</RecipeDef>
+</Defs>
