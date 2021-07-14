@@ -52,7 +52,7 @@ namespace PackedMeat
                     {
                         if (FoodUtility.GetMeatSourceCategory(ingredient.def) == MeatSourceCategory.Humanlike)
                             StackIn(mys, mysc, ingredient);
-                        else if (!Settings.unusual_is_generic && ingredient.def.ingestible.specialThoughtDirect != null && ingredient.def.ingestible.specialThoughtDirect.stages[0].baseMoodEffect < 0)
+                        else if (!Settings.unusual_is_generic && FoodUtility.GetMeatSourceCategory(ingredient.def) == MeatSourceCategory.Insect)
                             StackIn(odd, oddc, ingredient);
                         else
                             StackIn(reg, regc, ingredient);

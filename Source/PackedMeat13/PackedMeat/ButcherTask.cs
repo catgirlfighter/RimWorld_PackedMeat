@@ -24,13 +24,13 @@ namespace PackedMeat
                 var things = __result.ToList();
                 Thing meat = things.Find(x => x.def.IsIngestible && x.def.ingestible.foodType == FoodTypeFlags.Meat);
 
-                if (meat == null)
+                if (meat == null || meat.def.ingestible.ateEvent != null)
                     return;
 
                 ThingDef d;
                 if (FoodUtility.GetMeatSourceCategory(meat.def) == MeatSourceCategory.Humanlike)
                     d = PackedMeat.MysteriousPackDef;
-                else if (!Settings.unusual_is_generic && meat.def.ingestible.specialThoughtDirect != null && meat.def.ingestible.specialThoughtDirect.stages[0].baseMoodEffect < 0)
+                else if (!Settings.unusual_is_generic && FoodUtility.GetMeatSourceCategory(meat.def) == MeatSourceCategory.Insect)
                     d = PackedMeat.OddPackDef; 
                 else
                     d = PackedMeat.RegularPackDef;

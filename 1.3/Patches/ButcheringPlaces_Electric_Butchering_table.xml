@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Patch>
+<!--
 	<Operation Class="PatchOperationSequence">
 		<success>Always</success>
 		<operations>
@@ -13,14 +14,5 @@
 			</li>
 		</operations>
 	</Operation>
-	<!--
-	<Operation Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="ElectricTableButcher"]/recipes</xpath>
-		<value>
-         		<li>avPackMeat40</li>
-         		<li>avPackMeat10</li>
-         		<li>avPackMeat</li>
-		</value>
-	</Operation>
-	-->
+-->
 </Patch>
