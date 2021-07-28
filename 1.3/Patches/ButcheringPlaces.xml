@@ -1,6 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-<!--
 	<Operation Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="ButcherSpot"]/recipes</xpath>
 		<value>
@@ -18,7 +17,7 @@
          		<li>avPackMeat</li>
 		</value>
 	</Operation>
--->
+
 	<Operation Class="PatchOperationReplace">
 		<xpath>Defs/RecipeDef[defName="ButcherCorpseFlesh"]/workerCounterClass</xpath>
 		<value>

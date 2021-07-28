@@ -1,4 +1,11 @@
-﻿1.0.10
+﻿1.0.11
+- added packing recipes back;
+- adjusted stacking rules. Odd meat is now always insect meat;
+- removed an option to count odd meat as regular, because that's a big deal in Ideology;
+- adjusted thoughts added when eating packs raw;
+- fixed broken ingredient generation for random packs;
+
+1.0.10
 - thoughts from consumables are freaking complicated in 1.3. Made so any food with thoughts doesn't stack any more, only insect food is odd, and mysterious is humanlike. Also disabled recipes for now. I'll wait for Ideology to come out to figure out what to do next;
 
 1.0.9

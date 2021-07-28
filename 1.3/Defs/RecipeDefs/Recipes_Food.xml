@@ -1,12 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<!--
 	<RecipeDef>
 		<defName>avPackMeat40</defName>
 		<label>Pack meat x40</label>
 		<description>Make a pack out of raw meat, allowing to use stacks more efficiently.</description>
 		<jobString>Packing meat.</jobString>
-		<workAmount>120</workAmount>
+		<workAmount>360</workAmount>
 		<workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
 		<efficiencyStat>ButcheryFleshEfficiency</efficiencyStat>
 		<effectWorking>ButcherFlesh</effectWorking>
@@ -40,7 +39,7 @@
 		<label>Pack meat x10</label>
 		<description>Make a pack out of raw meat, allowing to use stacks more efficiently.</description>
 		<jobString>Packing meat.</jobString>
-		<workAmount>30</workAmount>
+		<workAmount>90</workAmount>
 		<workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
 		<efficiencyStat>ButcheryFleshEfficiency</efficiencyStat>
 		<effectWorking>ButcherFlesh</effectWorking>
@@ -74,7 +73,7 @@
 		<label>Pack meat</label>
 		<description>Make a pack out of raw meat, allowing to use stacks more efficiently.</description>
 		<jobString>Packing meat.</jobString>
-		<workAmount>3</workAmount>
+		<workAmount>10</workAmount>
 		<workSpeedStat>ButcheryFleshSpeed</workSpeedStat>
 		<efficiencyStat>ButcheryFleshEfficiency</efficiencyStat>
 		<effectWorking>ButcherFlesh</effectWorking>
@@ -102,5 +101,4 @@
 		</products>
 		<workSkill>Cooking</workSkill>
 	</RecipeDef>
--->
 </Defs>

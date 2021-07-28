@@ -14,8 +14,10 @@ namespace PackedMeat
                 int num = 0;
                 foreach(var i in (cat.childThingDefs))
                     num += bill.Map.resourceCounter.GetCount(i);
+                //
                 foreach (var i in (cat.childCategories))
                     num += countEachCat(bill, i);
+                //
                 return num;
             }
 

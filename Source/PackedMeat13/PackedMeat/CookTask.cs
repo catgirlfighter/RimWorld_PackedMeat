@@ -16,7 +16,7 @@ namespace PackedMeat
             CompRottable rr = with.TryGetComp<CompRottable>();
 
             if (r != null && rr != null)
-                r.RotProgress = (r.RotProgress*thing.stackCount+rr.RotProgress*with.stackCount)/(thing.stackCount+with.stackCount);
+                r.RotProgress = (r.RotProgress * thing.stackCount + rr.RotProgress * with.stackCount) / (thing.stackCount+with.stackCount);
             thing.stackCount += with.stackCount;
         }
 
@@ -38,12 +38,15 @@ namespace PackedMeat
                     Thing reg = things.First(x => x.def == PackedMeat.RegularPackDef);
                     Thing odd = things.First(x => x.def == PackedMeat.OddPackDef);
                     Thing mys = things.First(x => x.def == PackedMeat.MysteriousPackDef);
+
                     reg.stackCount = 0;
                     odd.stackCount = 0;
                     mys.stackCount = 0;
+
                     CompIngredients regc = reg.TryGetComp<CompIngredients>();
                     CompIngredients oddc = odd.TryGetComp<CompIngredients>();
                     CompIngredients mysc = mys.TryGetComp<CompIngredients>();
+
                     regc.ingredients.Clear();
                     oddc.ingredients.Clear();
                     mysc.ingredients.Clear();
@@ -52,7 +55,7 @@ namespace PackedMeat
                     {
                         if (FoodUtility.GetMeatSourceCategory(ingredient.def) == MeatSourceCategory.Humanlike)
                             StackIn(mys, mysc, ingredient);
-                        else if (!Settings.unusual_is_generic && FoodUtility.GetMeatSourceCategory(ingredient.def) == MeatSourceCategory.Insect)
+                        else if (FoodUtility.GetMeatSourceCategory(ingredient.def) == MeatSourceCategory.Insect)
                             StackIn(odd, oddc, ingredient);
                         else
                             StackIn(reg, regc, ingredient);
@@ -83,9 +86,9 @@ namespace PackedMeat
                                 
                                 for (int counter = subComp.ingredients.Count - 1; counter >= 0; counter--)
                                     if (!ingredientsComp.ingredients.Contains(subComp.ingredients[counter]))
-                                        ingredientsComp.ingredients.Insert(i+1, subComp.ingredients[counter]);
-                                if (ingredient.def.ingestible == null || ingredient.def.ingestible.specialThoughtAsIngredient == null 
-                                    || ingredient.def == PackedMeat.OddPackDef && subComp.ingredients.Count > 0)
+                                        ingredientsComp.ingredients.Insert(i + 1, subComp.ingredients[counter]);
+                                //
+                                if (ingredient.def.ingestible == null || subComp.ingredients.Count > 0)
                                     ingredientsComp.ingredients.Remove(ingredient.def);
                             }
                         }

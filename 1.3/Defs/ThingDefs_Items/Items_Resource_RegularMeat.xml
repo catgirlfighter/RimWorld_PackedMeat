@@ -63,8 +63,8 @@
 			<ingestEffect>EatMeat</ingestEffect>
 			<ingestSound>RawMeat_Eat</ingestSound>	
 			<tasteThought>AteRawFood</tasteThought>
-			<specialThoughtDirect>avAteOddMeatDirect</specialThoughtDirect>
-			<specialThoughtAsIngredient>avAteOddMeatAsIngredient</specialThoughtAsIngredient>
+			<!--<specialThoughtDirect>avAteOddMeatDirect</specialThoughtDirect>-->
+			<!--<specialThoughtAsIngredient>avAteOddMeatAsIngredient</specialThoughtAsIngredient>-->
 		</ingestible>
 		<thingCategories>
 			<li>PackedMeat</li>

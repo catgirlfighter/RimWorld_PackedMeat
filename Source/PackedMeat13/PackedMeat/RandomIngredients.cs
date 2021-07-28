@@ -9,7 +9,6 @@ using RimWorld;
 
 namespace PackedMeat
 {
-    /*
     class RandomIngredients
     {
         [HarmonyPatch(typeof(ThingMaker), "MakeThing", new Type[] { typeof(ThingDef), typeof(ThingDef) })]
@@ -22,13 +21,12 @@ namespace PackedMeat
             [HarmonyAfter(new string[] { "net.avilmask.rimworld.mod.CommonSense" })]
             static void Postfix(Thing __result, ThingDef def, ThingDef stuff)
             {
-                if (Settings.CommonSenseMod == null || __result == null || !__result.def.IsIngestible)
+                if (Settings.CommonSenseMod == null || __result == null || __result.def == null || !__result.def.IsIngestible)
                     return;
-
                 CompIngredients ings = __result.TryGetComp<CompIngredients>();
                 if (ings == null || ings.ingredients.Count == 0)
                     return;
-
+                //
                 if (def == PackedMeat.MysteriousPackDef)
                 {
                     ings.ingredients.Clear();
@@ -44,8 +42,7 @@ namespace PackedMeat
                     ings.ingredients.Clear();
                     if (disgusting == null)
                         disgusting = DefDatabase<ThingDef>.AllDefsListForReading.Where(x => x.IsIngestible && x.ingestible.foodType == FoodTypeFlags.Meat
-                        && x.ingestible.sourceDef != null && x.ingestible.sourceDef.race != null && !x.ingestible.sourceDef.race.Humanlike
-                        && x.ingestible.specialThoughtAsIngredient != null && x.ingestible.specialThoughtAsIngredient.stages[0].baseMoodEffect < 0);
+                        && x.ingestible.sourceDef != null && x.ingestible.sourceDef.race != null && x.ingestible.sourceDef.race.Insect);
 
                     ThingDef td = disgusting.RandomElement();
                     if (td != null) ings.RegisterIngredient(td);
@@ -55,8 +52,8 @@ namespace PackedMeat
                     ings.ingredients.Clear();
                     if (regular == null)
                         regular = DefDatabase<ThingDef>.AllDefsListForReading.Where(x => x.IsIngestible && x.ingestible.foodType == FoodTypeFlags.Meat
-                        && x.ingestible.sourceDef != null && x.ingestible.sourceDef.race != null && !x.ingestible.sourceDef.race.Humanlike
-                        && x.ingestible.specialThoughtAsIngredient == null);
+                        && x.ingestible.sourceDef != null && x.ingestible.sourceDef.race != null && !x.ingestible.sourceDef.race.Humanlike && !x.ingestible.sourceDef.race.Insect
+                        && (x.ingredient == null || x.ingredient.mergeCompatibilityTags.NullOrEmpty()));
 
                     ThingDef td = regular.RandomElement();
                     if (td != null) ings.RegisterIngredient(td);
@@ -69,6 +66,6 @@ namespace PackedMeat
             }
 
         }
+
     }
-    */
 }

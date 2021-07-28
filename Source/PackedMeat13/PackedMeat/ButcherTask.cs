@@ -30,8 +30,8 @@ namespace PackedMeat
                 ThingDef d;
                 if (FoodUtility.GetMeatSourceCategory(meat.def) == MeatSourceCategory.Humanlike)
                     d = PackedMeat.MysteriousPackDef;
-                else if (!Settings.unusual_is_generic && FoodUtility.GetMeatSourceCategory(meat.def) == MeatSourceCategory.Insect)
-                    d = PackedMeat.OddPackDef; 
+                else if (FoodUtility.GetMeatSourceCategory(meat.def) == MeatSourceCategory.Insect)
+                    d = PackedMeat.OddPackDef;
                 else
                     d = PackedMeat.RegularPackDef;
 
@@ -48,7 +48,7 @@ namespace PackedMeat
                 }
 
                 things.Remove(meat);
-                things.Insert(0,t);
+                things.Insert(0, t);
 
                 __result = things;
             }
