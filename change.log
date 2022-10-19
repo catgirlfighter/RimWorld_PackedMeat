@@ -1,4 +1,7 @@
-﻿1.0.11
+﻿1.0.12
+- hurrdee 1.4;
+
+1.0.11
 - added packing recipes back;
 - adjusted stacking rules. Odd meat is now always insect meat;
 - removed an option to count odd meat as regular, because that's a big deal in Ideology;
