@@ -24,7 +24,7 @@ namespace PackedMeat
                 var things = __result.ToList();
                 Thing meat = things.Find(x => x.def.IsIngestible && x.def.ingestible.foodType == FoodTypeFlags.Meat);
 
-                if (meat == null || meat.def.ingestible.ateEvent != null)
+                if (meat == null || meat.def == ThingDefOf.Meat_Twisted || meat.def.ingestible.ateEvent != null)
                     return;
 
                 ThingDef d;
