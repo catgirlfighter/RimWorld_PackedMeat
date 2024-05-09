@@ -19,7 +19,7 @@ namespace PackedMeat
             static IEnumerable<ThingDef> regular = null;
             
             [HarmonyAfter(new string[] { "net.avilmask.rimworld.mod.CommonSense" })]
-            static void Postfix(Thing __result, ThingDef def, ThingDef stuff)
+            internal static void Postfix(Thing __result, ThingDef def, ThingDef stuff)
             {
                 if (Settings.CommonSenseMod == null || __result == null || __result.def == null || !__result.def.IsIngestible)
                     return;
@@ -60,7 +60,7 @@ namespace PackedMeat
                 }
             }
 
-            static bool Prepare(ModContentPack instance)
+            internal static bool Prepare(ModContentPack instance)
             {
                 return Settings.CommonSenseMod != null;
             }

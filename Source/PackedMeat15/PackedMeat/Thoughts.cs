@@ -13,7 +13,7 @@ namespace PackedMeat
         [HarmonyPatch(typeof(RimWorld.FoodUtility), "GetMeatSourceCategory", new Type[] { typeof(ThingDef) })]
         static class FoodUtility_GetMeatSourceCategory_PackedMeatPatch
         {
-            static bool Prefix(ref MeatSourceCategory __result, ThingDef source)
+            internal static bool Prefix(ref MeatSourceCategory __result, ThingDef source)
             {
                 if (source == PackedMeat.MysteriousPackDef)
                 {
@@ -35,14 +35,14 @@ namespace PackedMeat
         static class FoodUtility_ThoughtsFromIngesting_PackedMeatPatch
         {
             //private static void TryAddIngestThought(Pawn ingester, ThoughtDef def, Precept fromPrecept, List<FoodUtility.ThoughtFromIngesting> ingestThoughts, ThingDef foodDef, MeatSourceCategory meatSourceCategory)
-            static MethodInfo LTryAddIngestThought = null;
+            //private static MethodInfo LTryAddIngestThought = null;
 
-            static void Prepare()
-            {
-                LTryAddIngestThought = AccessTools.Method(typeof(FoodUtility), "TryAddIngestThought");
-            }
+            //internal static void Prepare()
+            //{
+            //    LTryAddIngestThought = AccessTools.Method(typeof(FoodUtility), "TryAddIngestThought");
+            //}
 
-            static bool Prefix(ref List<FoodUtility.ThoughtFromIngesting> __result, Pawn ingester, Thing foodSource, ThingDef foodDef)
+            internal static bool Prefix(ref List<FoodUtility.ThoughtFromIngesting> __result, Pawn ingester, Thing foodSource, ThingDef foodDef)
             {
                 if (foodDef != PackedMeat.MysteriousPackDef && foodDef != PackedMeat.OddPackDef && foodDef != PackedMeat.RegularPackDef)
                     return true;
