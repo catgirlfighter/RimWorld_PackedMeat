@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<ThingCategoryDef>
+		<defName>PackedMeat</defName>
+		<label>packed raw meat</label>
+		<parent>MeatRaw</parent>
+		<iconPath>Things/Item/Resource/MeatFoodRaw/RegularMeatPack/RegularMeatPack_b</iconPath>
+	</ThingCategoryDef>  
+</Defs>
