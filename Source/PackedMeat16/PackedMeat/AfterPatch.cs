@@ -13,7 +13,7 @@ namespace PackedMeat
         [HarmonyPatch(typeof(StaticConstructorOnStartupUtility), "CallAll")]
         static class StaticConstructorOnStartupUtility_CallAll_PackedMeat
         {
-            static void Postfix()
+            public static void Postfix()
             {
                 //removing non-corpse based sources of meat
                 IEnumerable<RecipeDef> l = DefDatabase<RecipeDef>.AllDefsListForReading.Where(x => x.defName.Contains("avPackMeat"));

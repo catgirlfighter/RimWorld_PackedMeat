@@ -23,9 +23,10 @@
 			<FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
 			<MarketValue>2</MarketValue>
 		</statBases>
+		<socialPropernessMatters>true</socialPropernessMatters>
 		<ingestible>
 			<foodType>Meat</foodType>
-			<preferability>DesperateOnly</preferability>
+			<preferability>RawBad</preferability>
 			<ingestEffect>EatMeat</ingestEffect>
 			<ingestSound>RawMeat_Eat</ingestSound>	
 			<tasteThought>AteRawFood</tasteThought>
@@ -57,14 +58,13 @@
 			<FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
 			<MarketValue>0.5</MarketValue>
 		</statBases>
+		<socialPropernessMatters>true</socialPropernessMatters>
 		<ingestible>
 			<foodType>Meat</foodType>
-			<preferability>DesperateOnly</preferability>
+			<preferability>RawBad</preferability>
 			<ingestEffect>EatMeat</ingestEffect>
 			<ingestSound>RawMeat_Eat</ingestSound>	
 			<tasteThought>AteRawFood</tasteThought>
-			<!--<specialThoughtDirect>avAteOddMeatDirect</specialThoughtDirect>-->
-			<!--<specialThoughtAsIngredient>avAteOddMeatAsIngredient</specialThoughtAsIngredient>-->
 		</ingestible>
 		<thingCategories>
 			<li>PackedMeat</li>
@@ -93,9 +93,10 @@
 			<FoodPoisonChanceFixedHuman>0.02</FoodPoisonChanceFixedHuman>
 			<MarketValue>0.8</MarketValue>
 		</statBases>
+		<socialPropernessMatters>true</socialPropernessMatters>
 		<ingestible>
 			<foodType>Meat</foodType>
-			<preferability>DesperateOnly</preferability>
+			<preferability>RawBad</preferability>
 			<ingestEffect>EatMeat</ingestEffect>
 			<ingestSound>RawMeat_Eat</ingestSound>
 			<tasteThought>AteRawFood</tasteThought>	
